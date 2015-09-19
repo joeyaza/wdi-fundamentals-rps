@@ -84,4 +84,35 @@ function getWinner(playerMove,computerMove) {
     return winner;
 
 
+}function playToFive() {
+  console.log('Let\'s play Rock Paper Scissors');
+  var playerWins = 0;
+  var computerWins = 0;
+  var player
+  var computer
+  
+  while (playerWins < 5 && computerWins < 5){
+    
+  var playerMove = getPlayerMove()
+  var computerMove = getComputerMove();
+  var winner = getWinner(playerMove,computerMove)
+  
+
+    if (winner== "player") {
+        console.log('player gets 1 point');
+        playerWins +=1
+    }
+    if (winner== "computer" ) {
+        console.log('computer gets 1 point')
+        computerWins +=1 
+     }
+     console.log('the score is - player has ' + playerWins + 'to computers ' + computerWins);
+
+
+
+  }
+
+  return [playerWins, computerWins];
 }
+
+playToFive()
