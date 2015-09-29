@@ -29,18 +29,17 @@ function getPlayerMove(move) {
     // Write an expression that operates on a variable called `move`
     // If a `move` has a value, your expression should evaluate to that value.
     // However, if `move` is not specified / is null, your expression should equal `getInput()`.
-var player = move || getInput();
-    return player;
-};
+    return move || getInput();
+}
 
 function getComputerMove(move) {
     // Write an expression that operates on a variable called `move`
     // If a `move` has a value, your expression should evaluate to that value.
     // However, if `move` is not specified / is null, your expression should equal `randomPlay()`.
+    return move || randomPlay();
+}
 
-var computer = move || randomPlay();
-    return computer;
-}       
+
 function getWinner(playerMove,computerMove) {
     var winner;
     // Write code that will set winner to either 'player', 'computer', or 'tie' based on the values of playerMove and computerMove.
@@ -106,7 +105,7 @@ function getWinner(playerMove,computerMove) {
         console.log('computer gets 1 point')
         computerWins +=1 
      }
-     console.log('the score is - player has ' + playerWins + 'to computers ' + computerWins);
+     console.log('the score is - player has ' + playerWins + ' to computer ' + computerWins);
 
 
 
